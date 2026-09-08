@@ -1,0 +1,21 @@
+realtest-daily
+Copyright 2026 Skillabs
+
+Licensed under the Apache License, Version 2.0 (the "License").
+See the LICENSE file for the full text.
+
+--------------------------------------------------------------------
+
+本仓 `shotcraft/` 目录是一个建立在下述开源项目之上的「魔改层」：
+
+  video-shotcraft
+  https://github.com/Vincentwei1021/video-shotcraft
+  Copyright 2026 Wei Yihao
+  Licensed under the Apache License, Version 2.0
+
+**本仓不重新分发 video-shotcraft 的任何文件**（自行安装，见 shotcraft/README.md）。
+`shotcraft/` 里是我们自己在它之上加的那一层——流程、房规、派工单模板、
+施工图骨架、自家卡写法——与上游同为 Apache-2.0。
+
+未包含（故意的）：video-talkcraft 相关的移植件。那个上游是
+PolyForm Noncommercial 1.0.0，非商业授权，不适合放进本仓让人随便用。

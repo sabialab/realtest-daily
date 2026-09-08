@@ -62,4 +62,4 @@ git clone https://github.com/Vincentwei1021/video-shotcraft
 
 ## License
 
-本目录 MIT。上游 video-shotcraft 是 Apache-2.0 且不含在本目录内，见 `NOTICE`。
+本目录 Apache-2.0，与上游 video-shotcraft 同一许可；上游文件不含在本目录内，见 `NOTICE`。
