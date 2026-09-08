@@ -39,7 +39,8 @@
 - **施工图骨架** + `shots.json` 契约该判什么
 - **硬定式与返工判例** + **自家卡怎么写**
 
-**不含上游文件**（自己去装，README 里有命令），也不含 PolyForm 非商业授权的那部分移植件。见 `shotcraft/NOTICE`。
+**上游 video-shotcraft 的原样副本就在 `shotcraft/upstream/`**（Apache-2.0，152 张卡 + 216 个 demo 源码 + 卡索引，零修改），自家卡在 `shotcraft/cards/`。
+唯一没收的是 PolyForm 非商业授权的那 11 张移植件——理由见 `shotcraft/cards/README.md`。
 
 ## 搭配
 
@@ -68,5 +69,6 @@
 
 **Apache-2.0**（见 `LICENSE` 与 `NOTICE`）。
 
-`shotcraft/` 那一层建立在 [video-shotcraft](https://github.com/Vincentwei1021/video-shotcraft) 之上，
-上游同为 Apache-2.0；**本仓不重新分发上游的任何文件**，自行安装。
+`shotcraft/upstream/` 是 [video-shotcraft](https://github.com/Vincentwei1021/video-shotcraft)
+的原样副本（Copyright 2026 Wei Yihao，Apache-2.0，零修改）。其余一切 Copyright 2026 Skillabs。
+逐项归属见 `NOTICE`。

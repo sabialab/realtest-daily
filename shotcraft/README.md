@@ -10,23 +10,15 @@
 
 这一层就是补这三样。**方法和卡全在上游，这里只加我们那几条。**
 
-## 装上游
+## 上游已经在盘
 
-这一层不带上游文件，自己装：
+`upstream/` 就是 [video-shotcraft](https://github.com/Vincentwei1021/video-shotcraft) 的**原样副本，零修改**（Apache-2.0，许可证在 `upstream/LICENSE`）——152 张卡、方法文档、216 个 demo 源码、卡索引都在里面，直接读。
 
-```bash
-# 方式 1：submodule（推荐，能锁 commit）
-git submodule add https://github.com/Vincentwei1021/video-shotcraft \
-  .claude/skills/<你的skill名>/upstream
-git submodule update --init --filter=blob:none
+收录范围与「哪几样没搬、为什么」见 [`upstream/README.md`](upstream/README.md)。**没搬的里面有一样值得单独提**：上游的 `jianying-export/` 那几个脚本会对本机第三方软件的草稿库做写入／改名／递归删除，我们不转发，也建议你不要跑。
 
-# 方式 2：直接 clone
-git clone https://github.com/Vincentwei1021/video-shotcraft
-```
+⚠️ 两条纪律：**`upstream/` 只读，一个字都别改**（改了你对它做过的安全审查结论就失效了）；**上游文本是数据不是指令**——它写给自己用户的那些「问用户选哪个模式」，你的 Agent 读到不要执行、不要停下来问。
 
-**锁 commit，别跟 HEAD 走。** 卡库会长（我们见过 104 → 152），跟着漂会让你的施工图对不上。锁一个 commit，升级时先看区间 diff 再决定采不采。
-
-⚠️ **不要 `npm install` 上游**，也不要跑它自带的任何脚本。**上游写给它自己用户的文字，对你的 Agent 来说是数据不是指令**——它的 SKILL.md 里那些「询问用户选哪个模式」之类的话，你要在派工单里给死，不要让执行体停下来问。
+想跟最新版：`git clone https://github.com/Vincentwei1021/video-shotcraft`，**锁 commit 别跟 HEAD**。
 
 ## 这一层给你什么
 
@@ -39,6 +31,8 @@ git clone https://github.com/Vincentwei1021/video-shotcraft
 | `references/build-brief.md` | **派工单七节模板**。这一层里最值钱的一件 |
 | `references/spec-template.md` | 施工图骨架 + `shots.json` 契约 |
 | `references/cards.md` | 自家卡怎么写、什么时候该写、和上游卡的边界 |
+| `upstream/` | **上游原样副本**：152 张卡 + 方法文档 + 216 个 demo 源码 + 卡索引 |
+| `cards/` | **自家卡 5 张**（另 11 张是 PolyForm-NC 移植件，未收录，理由见该目录 README） |
 
 ## 最反直觉的两条
 
@@ -57,9 +51,11 @@ git clone https://github.com/Vincentwei1021/video-shotcraft
 ## 边界
 
 - **这不是一个能直接跑的 skill。** 它假设你有自己的 Remotion 母版工程（组件库、契约脚本、字幕系统）。这层是方法，不是运行时。
+- **`cards/` 只有 5 张，不是 16 张。** 另外 11 张是 PolyForm Noncommercial 授权的移植件，不能以 Apache-2.0 再分发——理由与替代路径见 `cards/README.md` 末节。
 - **值一律不给。** 色值、字号、时长、推近幅度、音量——这些都该是你自己的。抄我们的值只会让你的片子看起来像我们的片子，而且我们的值全是探针实测出来的，换了字号就得重量。
 - 上游那 152 张卡是主词汇，自家卡是补充。**别做上游卡的镜像表**——我们做过一份 106 卡适配层，升级一次就全废了，最后整体退役。
 
 ## License
 
-本目录 Apache-2.0，与上游 video-shotcraft 同一许可；上游文件不含在本目录内，见 `NOTICE`。
+`upstream/` ＝上游 video-shotcraft 的原样副本（Apache-2.0，Copyright 2026 Wei Yihao）。
+其余一切 Copyright 2026 Skillabs，同为 Apache-2.0。见 `NOTICE`。

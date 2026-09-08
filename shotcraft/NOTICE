@@ -2,17 +2,18 @@
 
   video-shotcraft
   https://github.com/Vincentwei1021/video-shotcraft
-  Copyright (c) Vincent Wei
+  Copyright 2026 Wei Yihao
   Licensed under the Apache License, Version 2.0
 
 上游提供：镜头卡库（152 张卡 / 十类）、审美准则、八阶段流程、demo 源码。
-**本目录不重新分发上游的任何文件**——请自行从上游仓库获取（见 README「装上游」）。
 
-本目录只包含我们自己在上游之上加的那一层（流程、房规、派工单模板、施工图骨架、
-自家卡写法），以 Apache-2.0 授权（与上游同一许可）。
+`upstream/` ＝上游的**原样副本，零修改**（commit b0cb89173c9278042db78c3fb9c339814966f874）；许可证正文在
+`upstream/LICENSE`，收录范围与未收录项见 `upstream/README.md`。
 
-未包含（故意的）：
-- 上游 video-shotcraft 的任何文件。自己去装。
-- video-talkcraft 相关的移植件。那个上游是 PolyForm Noncommercial 1.0.0，
-  非商业授权，不适合放进本仓让人随便用。要用请自行去它的仓库
-  确认授权是否覆盖你的用途。
+`upstream/` 之外的一切（SKILL.md、references/、cards/）是我们自己在它之上
+加的那一层——流程、房规、派工单模板、施工图骨架、自家卡——
+Copyright 2026 Skillabs，同为 Apache-2.0，与上游各自独立。
+
+未包含（故意的）：video-talkcraft 相关的移植件。那个上游是
+PolyForm Noncommercial 1.0.0，非商业授权，不适合放进本仓让人随便用。
+见 `cards/README.md` 末节。
