@@ -1,0 +1,18 @@
+本目录是一个「魔改层」，建立在上游开源项目之上：
+
+  video-shotcraft
+  https://github.com/Vincentwei1021/video-shotcraft
+  Copyright (c) Vincent Wei
+  Licensed under the Apache License, Version 2.0
+
+上游提供：镜头卡库（152 张卡 / 十类）、审美准则、八阶段流程、demo 源码。
+**本目录不重新分发上游的任何文件**——请自行从上游仓库获取（见 README「装上游」）。
+
+本目录只包含我们自己在上游之上加的那一层（流程、房规、派工单模板、施工图骨架、
+自家卡写法），以 MIT 授权，与上游各自独立。
+
+未包含（故意的）：
+- 上游 video-shotcraft 的任何文件。自己去装。
+- video-talkcraft 相关的移植件。那个上游是 PolyForm Noncommercial 1.0.0，
+  非商业授权，不适合放进一个 MIT 仓库让人随便用。要用请自行去它的仓库
+  确认授权是否覆盖你的用途。

@@ -26,6 +26,18 @@
 
 零依赖、无脚本，纯 Prompt。
 
+## shotcraft 魔改层
+
+`shotcraft/` 是**出片那一层的完整方法包**——怎么在一个开源镜头卡库（[video-shotcraft](https://github.com/Vincentwei1021/video-shotcraft)，Apache-2.0）之上，加出你自己的产线：
+
+- **房规层**：把你的红线映射成画面规则；九条「必要 rules」；上游哪几条在你这儿不执行
+- **四阶段两审核点** + 收货 QC 的机器判/人判分界
+- **派工单七节模板**——派活给另一个 Agent 渲片时用的单子，这一层里最值钱的一件
+- **施工图骨架** + `shots.json` 契约该判什么
+- **硬定式与返工判例** + **自家卡怎么写**
+
+**不含上游文件**（自己去装，README 里有命令），也不含 PolyForm 非商业授权的那部分移植件。见 `shotcraft/NOTICE`。
+
 ## 搭配
 
 第 6 步的人味审校有独立开源版：[de-ai-flavor](https://github.com/sabialab/de-ai-flavor)。装了就直接调它，没装就照 SKILL.md 里的十二项自查。
